@@ -80,18 +80,38 @@ Learn more about the power of Turborepo:
 - [Configuration Options](https://turbo.build/repo/docs/reference/configuration)
 - [CLI Usage](https://turbo.build/repo/docs/reference/command-line-reference)
 
+## Frontend
+### Amplify Manual Settings
 ```bash
-cd /workspaces/coconut/
 npm install --save-dev @aws-amplify/backend@latest @aws-amplify/backend-cli@latest typescript --workspace=web
 npm install --save-dev @aws-amplify/backend-cli aws-amplify @aws-amplify/ui-react --workspace=web
+```
+https://docs.amplify.aws/react/start/manual-installation/#manual-setup
+
+### Run Next.js
+```bash
 cd /workspaces/coconut/apps/web
 npm run dev
 ```
 
+## Backend
+### Setup NestJS
 ```bash
+cd /workspaces/coconut/
 npm i -g @nestjs/cli
+nest new backend
+```
+
+### Amplify Manual Settings
+```bash
 npm install --save-dev @aws-amplify/backend@latest @aws-amplify/backend-cli@latest typescript --workspace=backend
 npm install --save-dev @aws-amplify/backend-cli aws-amplify @aws-amplify/ui-react --workspace=backend
+```
+
+https://docs.amplify.aws/react/start/manual-installation/#manual-setup
+
+### Run NestJS
+```bash
 cd /workspaces/coconut/apps/backend
 npm run start
 ```
