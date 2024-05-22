@@ -81,10 +81,17 @@ Learn more about the power of Turborepo:
 - [CLI Usage](https://turbo.build/repo/docs/reference/command-line-reference)
 
 ```bash
+cd /workspaces/coconut/
+npm install --save-dev @aws-amplify/backend@latest @aws-amplify/backend-cli@latest typescript --workspace=web
+npm install --save-dev @aws-amplify/backend-cli aws-amplify @aws-amplify/ui-react --workspace=web
+cd /workspaces/coconut/apps/web
 npm run dev
 ```
 
 ```bash
-npm install --save-dev @aws-amplify/backend@latest @aws-am
-plify/backend-cli@latest typescript --workspace=web
+npm i -g @nestjs/cli
+npm install --save-dev @aws-amplify/backend@latest @aws-amplify/backend-cli@latest typescript --workspace=backend
+npm install --save-dev @aws-amplify/backend-cli aws-amplify @aws-amplify/ui-react --workspace=backend
+cd /workspaces/coconut/apps/backend
+npm run start
 ```
